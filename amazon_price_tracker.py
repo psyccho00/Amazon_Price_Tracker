@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-practice_url = "https://appbrewery.github.io/instant_pot/"
+# Change the url to that product that u want to track the price. 
 live_url = "https://www.amazon.in/Hero-Xpulse-Booking-Ex-Showroom-Polestar/dp/B0D9DLZ2DJ/?_encoding=UTF8&pd_rd_w=yRgfw&content-id=amzn1.sym.5e88c7b1-d6dd-463e-95f7-24271869827e&pf_rd_p=5e88c7b1-d6dd-463e-95f7-24271869827e&pf_rd_r=Y2V838QG7T8DFWBKQNGZ&pd_rd_wg=ruT2c&pd_rd_r=94aaa749-8cd6-4ba1-bc48-07041340c773&ref_=pd_hp_d_btf_ls_gwc_pc_en4_"
 
 
@@ -31,6 +31,7 @@ response = requests.get(live_url, headers= header)
 
 soup = BeautifulSoup(response.content, "html.parser")
 # print(soup.prettify())
+
 
 # # Find the HTML element that contains the price
 # price = soup.find(class_="a-price-whole").get_text()
