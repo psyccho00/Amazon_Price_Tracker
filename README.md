@@ -65,13 +65,14 @@ Makes an HTTP GET request and parses the returned HTML using BeautifulSoup.
 ### 5. Extract Product Price and Title
 ```python
 price = soup.find(class_="a-price-whole").get_text()
+    # We have to remove the comas from between the nos or else the less than operator will not work and it will give str error
 price_clean = price.replace(',', '').strip()
 price_as_float = float(price_clean)
 
 title = soup.find(id="productTitle").get_text().strip()
 ```
 
-- Extracts the price and removes formatting characters like commas    (We had to remove the comas from between the nos or else the less than operator will not work and it will give str error)
+- Extracts the price and removes formatting characters like commas    
 - Converts the price to a float for comparison
 - Gets the product name for use in the email
 
