@@ -36,8 +36,8 @@ soup = BeautifulSoup(response.content, "html.parser")
 # # Find the HTML element that contains the price
 # price = soup.find(class_="a-price-whole").get_text()
 #
-# # Remove the dollar sign using split
-# # price_without_currency = price.split("$")[1]
+# # Remove the rupee sign using split
+# # price_without_currency = price.split("₹")[1]
 #
 # # Convert to floating point number
 # price_as_float = float(price)
